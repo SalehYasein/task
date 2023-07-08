@@ -1,0 +1,155 @@
+.userCardDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userCard {
+  background-color: #fff;
+  margin: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  height: 300px;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.userCard:hover {
+  transform: scale(1.15);
+}
+.userCard::after {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 50%;
+  background-color: var(--blue-color);
+  left: -2.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 20px;
+}
+
+.userCard .userDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 90%;
+  max-width: 500px;
+}
+
+
+.userCard .userDetails .userImg {
+  height: 80%;
+  border-radius: 50%;
+  margin-right: 40px;
+  margin-left: 20px;
+}
+
+.userCard .userDetails .userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.userCard .userDetails div:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.userCard .userDetails div i {
+  margin-right: 15px;
+  color: var(--blue-color);
+}
+
+.userCard .userDetails div span {
+  font-size: 14px;
+}
+.userCard .userDetails div a:hover {
+  color: var(--blue-color);
+  cursor: pointer;
+}
+.userCard .userDetails div a{
+  position: relative;
+}
+.userCard .userDetails div a::before{
+  position: absolute;
+  content: "send an Email";
+  background-color: var(--blue-color);
+  color: white;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+    width: 100px;
+    height: 25px;
+    left: 55%;
+    top: -140%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+.userCard .userDetails div a::after{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid var(--blue-color);
+  top: -8px;
+  right: 50px;
+  visibility: hidden;
+}
+.userCard .userDetails div a:hover::before,
+.userCard .userDetails div a:hover::after{
+  visibility: visible;
+}
+.userCard .backButton {
+  margin-left: 10px;
+  height: 10%;
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--gray-color);
+}
+
+.userCard .backButton span{
+  margin-left: 10px;
+}
+
+.userCard .backButton:hover {
+  color: var(--blue-color);
+  cursor: pointer;
+}
+
+@media (max-width:768px) {
+  .userCard {
+    height: 400px;
+    max-width: 300px;
+  }
+
+  .userCard .userDetails {
+    flex-direction: column;
+  }
+
+  .userCard .userDetails .userImg {
+    width: 60%;
+    height: auto;
+    margin: 30px 0 20px;
+  }
+
+  .userCard::after {
+    width: 50%;
+    height: 4px;
+    top: -2.5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .userCard .userDetails div:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

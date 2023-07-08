@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="header">
+      <div class="headerIcon">
+        <i class="fa-solid fa-user-group"></i>
+      </div>
+      <h4 class="pageHeader">Users List</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="search">
+      <div class="searchIcon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <input class="p-10" type="search" [(ngModel)]="searchQuery" placeholder="Search by ID" (input)="search()">
+    </div>
+  </div>
+  <div class="row contant">
+    <div class="userCard col-lg-2 col-md-4 col-sm-6 " *ngFor="let user of users" (click)="moveToUserInfo(user.id)">
+      <div class="userInfo">
+        <img class="userImg" [src]="user.avatar" alt="user img">
+        <h6>{{ user.first_name }} {{ user.last_name }}</h6>
+        <div class="viewUser">
+          <div class="id">
+            <i class="fa-solid fa-id-card"></i>
+            <span>ID: {{ user?.id }}</span>
+          </div>
+          <a class="view" (click)="moveToUserInfo(user.id)">
+            <i class="fa-solid fa-eye"></i>
+            <span>View</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.loadText {
+  margin-left: 20px;
+}
+
+.loadding {
+  margin-top: 40px;
+}
+
+.spinner-border {
+  border-color: #4F7BFF;
+  border-left-color: transparent;
+}

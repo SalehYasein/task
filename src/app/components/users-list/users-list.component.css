@@ -1,0 +1,118 @@
+.header .headerIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  position: relative;
+  margin: 20px auto 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchIcon {
+  font-size: 18px;
+  color: var(--gray-color);
+  width: 34px;
+  height: 34px;
+  margin-right: -37px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input {
+  background-color: transparent;
+  border: 1px solid var(--gray-color);
+  border-radius: 25px;
+  padding-left: 40px;
+  max-width: 50%;
+  height: 35px;
+}
+
+.search input:focus::placeholder {
+  opacity: 0;
+}
+
+.userCard {
+  background-color: #fff;
+  margin: 10px;
+  padding: 10px;
+  height: 225px;
+  width: 170px;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.userCard::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 4px;
+  background-color: var(--blue-color);
+  top: -2.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+.userCard .userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.userCard .userInfo .userImg {
+  width: 60%;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+.userCard .userInfo h6 {
+  margin-bottom: 30px;
+  color: var(--blue-color);
+}
+
+.userCard:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.viewUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.viewUser i {
+  margin-right: 5px;
+}
+
+.viewUser .id,
+.viewUser a {
+  color: var(--gray-color);
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.viewUser .id {
+  border-right: 1px solid var(--gray-color);
+}
+
+.viewUser a:hover {
+  color: var(--blue-color);
+}

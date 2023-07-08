@@ -1,0 +1,8 @@
+<router-outlet></router-outlet>
+<div class="loadding d-flex justify-content-center">
+  <ng-container *ngIf="loadingService.isLoading">
+    <div class="spinner-border" role="status">
+    </div>
+    <p class="loadText">Loading...</p>
+  </ng-container>
+</div>
